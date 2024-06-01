@@ -6,21 +6,21 @@ class Lintnet < Formula
   desc "Secure, Powerful, Reusable Configuration file linter powered by Jsonnet
 "
   homepage "https://github.com/lintnet/lintnet"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/lintnet/lintnet/releases/download/v0.3.0/lintnet_darwin_amd64.tar.gz"
-      sha256 "6ee71c0d3dfcd9aef5da91a87383a173278062f1cafa7b7f635f7e3d8de8ddc0"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.0/lintnet_darwin_amd64.tar.gz"
+      sha256 "bdcdc0225bf486f06b935d1b76d119cf700edc96dc5a2afa5aa509f175051448"
 
       def install
         bin.install "lintnet"
       end
     end
     on_arm do
-      url "https://github.com/lintnet/lintnet/releases/download/v0.3.0/lintnet_darwin_arm64.tar.gz"
-      sha256 "329b37afffd081693075282f5a40398fdbf401f71168ff6f4eb12ecf0e56cd31"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.0/lintnet_darwin_arm64.tar.gz"
+      sha256 "a7e3bb76d420ed38e4078905438fdb41c294f700f1b96c81bab35c056a5e4f73"
 
       def install
         bin.install "lintnet"
@@ -31,8 +31,8 @@ class Lintnet < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.3.0/lintnet_linux_amd64.tar.gz"
-        sha256 "59dbeb22f5f1d0df41431f6843be6298af66d26c42bd790b3041da7782aad2e4"
+        url "https://github.com/lintnet/lintnet/releases/download/v0.4.0/lintnet_linux_amd64.tar.gz"
+        sha256 "87b1a0b4b1d5d48c91baab9df06d79061d506d01868ca55d0aabbd7291e351be"
 
         def install
           bin.install "lintnet"
@@ -41,8 +41,8 @@ class Lintnet < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.3.0/lintnet_linux_arm64.tar.gz"
-        sha256 "078d5478b5e5f8787fd093b628edbbeee3583cc6ca1ea7e4c56d4179749715fd"
+        url "https://github.com/lintnet/lintnet/releases/download/v0.4.0/lintnet_linux_arm64.tar.gz"
+        sha256 "29aaa30c7b9ffb2f3bd880866a6b880a6c75385b58ad3f2a89016e33a379ffc0"
 
         def install
           bin.install "lintnet"
