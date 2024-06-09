@@ -6,24 +6,26 @@ class Lintnet < Formula
   desc "Secure, Powerful, Reusable Configuration file linter powered by Jsonnet
 "
   homepage "https://github.com/lintnet/lintnet"
-  version "0.4.6"
+  version "0.4.7"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/lintnet/lintnet/releases/download/v0.4.6/lintnet_darwin_amd64.tar.gz"
-      sha256 "0f8555353c17f66ba9ab81d58e69b519376e7fab4d2a0b83db487599c4b3681d"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_darwin_amd64.tar.gz"
+      sha256 "c482235a4a35963db6bc4d5b5263fc105d115a29cab6c8b4bc51278cfc20ef5b"
 
       def install
         bin.install "lintnet"
+        generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
       end
     end
     on_arm do
-      url "https://github.com/lintnet/lintnet/releases/download/v0.4.6/lintnet_darwin_arm64.tar.gz"
-      sha256 "a5066a974a48e8a15ac50dbe349cd21e5bd080e3791200deaf35f8f7a9f9c441"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_darwin_arm64.tar.gz"
+      sha256 "f8d449cdd90a5b9509e4f77ef8c25b6e23b269f250abc71c0e5c17bb41cb060c"
 
       def install
         bin.install "lintnet"
+        generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
       end
     end
   end
@@ -31,21 +33,23 @@ class Lintnet < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.4.6/lintnet_linux_amd64.tar.gz"
-        sha256 "211c64366662ba71fad502b6808ea4fbb7a18351eb0862f965f2e60f03d9efdf"
+        url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_linux_amd64.tar.gz"
+        sha256 "a1e9560dea032d347415a1cb39b0c380733e2cff7e64231a0417ea00f685208e"
 
         def install
           bin.install "lintnet"
+          generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.4.6/lintnet_linux_arm64.tar.gz"
-        sha256 "6a244c70897a905f466cd7101c49d8db48ebc243f251f9f1d2f892da1638149b"
+        url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_linux_arm64.tar.gz"
+        sha256 "7466612992c8bca43e31f4c601b9e18d56afd52601384169d46f38e86908b100"
 
         def install
           bin.install "lintnet"
+          generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
         end
       end
     end
