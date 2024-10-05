@@ -6,13 +6,13 @@ class Lintnet < Formula
   desc "Secure, Powerful, Reusable Configuration file linter powered by Jsonnet
 "
   homepage "https://github.com/lintnet/lintnet"
-  version "0.4.7"
+  version "0.4.8"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_darwin_amd64.tar.gz"
-      sha256 "c482235a4a35963db6bc4d5b5263fc105d115a29cab6c8b4bc51278cfc20ef5b"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.8/lintnet_darwin_amd64.tar.gz"
+      sha256 "57955a6e2872ff724ec727eccb42df05797ad5c9cf499168df564adc32afd8a5"
 
       def install
         bin.install "lintnet"
@@ -20,8 +20,8 @@ class Lintnet < Formula
       end
     end
     on_arm do
-      url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_darwin_arm64.tar.gz"
-      sha256 "f8d449cdd90a5b9509e4f77ef8c25b6e23b269f250abc71c0e5c17bb41cb060c"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.8/lintnet_darwin_arm64.tar.gz"
+      sha256 "4ad01c5cc176f7bd2fbda76607743ed1ed080f8c956140de1e628ed0ec44222e"
 
       def install
         bin.install "lintnet"
@@ -33,8 +33,8 @@ class Lintnet < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_linux_amd64.tar.gz"
-        sha256 "a1e9560dea032d347415a1cb39b0c380733e2cff7e64231a0417ea00f685208e"
+        url "https://github.com/lintnet/lintnet/releases/download/v0.4.8/lintnet_linux_amd64.tar.gz"
+        sha256 "a0bdfc5504f1e72351e89a21ee54b80158c48e3d8811e6d62976def4cea946a5"
 
         def install
           bin.install "lintnet"
@@ -44,8 +44,8 @@ class Lintnet < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_linux_arm64.tar.gz"
-        sha256 "7466612992c8bca43e31f4c601b9e18d56afd52601384169d46f38e86908b100"
+        url "https://github.com/lintnet/lintnet/releases/download/v0.4.8/lintnet_linux_arm64.tar.gz"
+        sha256 "68fe0a937113740f960c9a1f3658ecd228043f2c203efaa1aa27acee1b3e077f"
 
         def install
           bin.install "lintnet"
