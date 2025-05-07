@@ -6,13 +6,13 @@ class Lintnet < Formula
   desc "Secure, Powerful, Reusable Configuration file linter powered by Jsonnet
 "
   homepage "https://github.com/lintnet/lintnet"
-  version "0.4.9"
+  version "0.4.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lintnet/lintnet/releases/download/v0.4.9/lintnet_darwin_amd64.tar.gz"
-      sha256 "553d479d46a6af344ea1bf7bddaae5a19e9220e97ee112923624cd02591dd907"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.10/lintnet_darwin_amd64.tar.gz"
+      sha256 "244b5b87c0e8724d2258f38dc266a8b25a429d0ef1d04ce2cb5ab17bf61595d1"
 
       def install
         bin.install "lintnet"
@@ -20,8 +20,8 @@ class Lintnet < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lintnet/lintnet/releases/download/v0.4.9/lintnet_darwin_arm64.tar.gz"
-      sha256 "ec75c9a8e5b324fec5a7616b96ee2e8f615ace83d8a56e3bf83d60667202570f"
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.10/lintnet_darwin_arm64.tar.gz"
+      sha256 "9d5f93082ef5dd5b17180be18f52be680948cd5c2d24c3a82040a6159b105785"
 
       def install
         bin.install "lintnet"
@@ -31,26 +31,20 @@ class Lintnet < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.4.9/lintnet_linux_amd64.tar.gz"
-        sha256 "77405a4de92f61d804f41227306ca279e177f96bffb61b9b1908661c0c2ffc7d"
-
-        def install
-          bin.install "lintnet"
-          generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.10/lintnet_linux_amd64.tar.gz"
+      sha256 "5ebd37572d6f301d0c468a7e645e93f4b4a8dc49e837e9a87f4647046b9de0d0"
+      def install
+        bin.install "lintnet"
+        generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/lintnet/lintnet/releases/download/v0.4.9/lintnet_linux_arm64.tar.gz"
-        sha256 "c48b91c92834af40fdd3671e79531d8a4adae70cf1824c3bd5d4b734e3def5be"
-
-        def install
-          bin.install "lintnet"
-          generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/lintnet/lintnet/releases/download/v0.4.10/lintnet_linux_arm64.tar.gz"
+      sha256 "3b69a419d340739810669ae58a102c3bb0c5761aba5a5d8a7914d31a5e169ed7"
+      def install
+        bin.install "lintnet"
+        generate_completions_from_executable(bin/"lintnet", "completion", shells: [:bash, :zsh, :fish])
       end
     end
   end
